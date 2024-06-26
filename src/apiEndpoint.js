@@ -4,7 +4,7 @@ export const CUSTOMER_API = {
   UPDATE_PROFILE: `${BASE_URL}/Customer/UpdateProfile`,
   SIGN_UP: `${BASE_URL}/Customer/Register`,
   MASTER: `${BASE_URL}/Customer`,
-  GET_DETAILS: `${BASE_URL}/Customer/user`,
+  GET_DETAILS: (userId) => `${BASE_URL}/Customer/user/${userId}`,
   SINGLE: (customerId) => `${BASE_URL}/Customer/${customerId}`,
 };
 
@@ -29,12 +29,12 @@ export const BOOKING_API = {
 
 export const DOCTOR_API = {
   MASTER: `${BASE_URL}/doctor`,
-  GET_DETAILS: `${BASE_URL}/Doctor/user`,
+  GET_DETAILS: (userId) => `${BASE_URL}/Doctor/user/${userId}`,
 };
 
 export const STAFF_API = {
   MASTER: `${BASE_URL}/Staff`,
-  GET_DETAILS: `${BASE_URL}/Staff/user`,
+  GET_DETAILS: (userId) => `${BASE_URL}/Staff/user/${userId}`,
 };
 
 export const SERVICE_API = {
